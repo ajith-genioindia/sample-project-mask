@@ -5,6 +5,7 @@ import { getCoupon } from "../api/couponApi";
 const EMPTY_FORM = {
   code: "",
   offerCode: "",
+  offerEndDate: "",
   name: "",
   startDate: "",
   endDate: "",
@@ -34,6 +35,7 @@ function CouponForm({ mode }) {
           setForm({
             code: coupon.code,
             offerCode: coupon.offerCode,
+            offerEndDate: coupon.offerEndDate,
             name: coupon.name,
             startDate: coupon.startDate,
             endDate: coupon.endDate,
@@ -89,6 +91,10 @@ function CouponForm({ mode }) {
       <label>
         オファーコード
         <input value={form.offerCode} onChange={(e) => setForm({ ...form, offerCode: e.target.value })} />
+      </label>
+      <label>
+        オファー終了日
+        <input type="date" value={form.offerEndDate} onChange={(e) => setForm({ ...form, offerEndDate: e.target.value })} />
       </label>
       <label>
         クーポン名称
