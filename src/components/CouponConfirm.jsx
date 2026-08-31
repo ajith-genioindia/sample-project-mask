@@ -29,6 +29,7 @@ function CouponConfirm({ mode }) {
       <h1>{mode === "edit" ? "リワードクーポンマスタ変更確認" : "リワードクーポンマスタ登録確認"}</h1>
       <dl>
         <dt>クーポンID</dt><dd>{mode === "edit" ? id : "自動採番"}</dd>
+        <dt>オファー終了日</dt><dd>{form.offerEndDate}</dd>
         <dt>クーポン名称</dt><dd>{form.name}</dd>
         <dt>期間（開始日）</dt><dd>{form.startDate}</dd>
         <dt>期間（終了日）</dt><dd>{form.endDate}</dd>

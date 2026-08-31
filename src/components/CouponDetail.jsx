@@ -23,6 +23,7 @@ function CouponDetail({ currentUser }) {
         <dt>クーポンID</dt><dd>{coupon.id}</dd>
         <dt>クーポンコード</dt><dd>{coupon.code}</dd>
         <dt>オファーコード</dt><dd>{coupon.offerCode}</dd>
+        <dt>オファー終了日</dt><dd>{coupon.offerEndDate}</dd>
         <dt>クーポン名称</dt><dd>{coupon.name}</dd>
         <dt>期間（開始日）</dt><dd>{coupon.startDate}</dd>
         <dt>期間（終了日）</dt><dd>{coupon.endDate}</dd>
