@@ -1,0 +1,266 @@
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-danger: #dc2626;
+  --color-danger-dark: #b91c1c;
+  --color-border: #d1d5db;
+  --color-bg: #f3f4f6;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Segoe UI",
+    Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#root {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* ---------- shared: form controls ---------- */
+
+input[type="text"],
+input[type="date"],
+input:not([type]),
+textarea {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+input:disabled {
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+  width: 100%;
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  margin: 0;
+}
+
+legend {
+  padding: 0 6px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+fieldset label {
+  margin-right: 14px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+button {
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+button:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+/* ---------- CouponList ---------- */
+
+.coupon-list .search-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 18px;
+}
+
+.coupon-list .search-area button {
+  margin-left: auto;
+}
+
+.coupon-list .search-area button + button {
+  margin-left: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+thead th {
+  background: #eef2ff;
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+  background: #f9fafb;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody td button {
+  padding: 4px 10px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+tbody td button:last-child {
+  background: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+tbody td button:last-child:hover {
+  background: var(--color-danger-dark);
+  border-color: var(--color-danger-dark);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.pagination button {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* ---------- CouponDetail ---------- */
+
+.coupon-detail dl,
+.coupon-confirm dl {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 4px 16px;
+  margin-bottom: 20px;
+}
+
+.coupon-detail dt,
+.coupon-confirm dt {
+  float: left;
+  clear: left;
+  width: 160px;
+  padding: 10px 0;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.coupon-detail dd,
+.coupon-confirm dd {
+  margin: 0 0 0 160px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.coupon-detail dd::after,
+.coupon-confirm dd::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.coupon-detail button,
+.coupon-confirm button {
+  margin-right: 8px;
+}
+
+/* ---------- CouponForm ---------- */
+
+.coupon-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.coupon-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--color-text-muted);
+}
+
+.coupon-form label input,
+.coupon-form label textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  font-weight: normal;
+  color: var(--color-text);
+}
+
+.coupon-form fieldset {
+  margin-bottom: 14px;
+}
+
+.errors {
+  background: #fef2f2;
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger-dark);
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  margin: 0 0 16px;
+  font-size: 13px;
+}

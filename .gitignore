@@ -1,0 +1,10 @@
+# Never commit real environment/credential files
+.env
+.env.local
+.env.*.local
+
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store

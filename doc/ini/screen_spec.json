@@ -1,0 +1,375 @@
+{
+  "_comment": "Auto-scaffolded by analyze_screens.py (tree-sitter AST parse, react-router plugin) — a best-effort first draft. Search for \"_review_needed\" and fix those entries by hand before generating the doc from this file.",
+  "owner": "カルティク",
+  "screen_label": "サンプルマスタ",
+  "screens": [
+    {
+      "id": "coupons",
+      "type": "list",
+      "sheet_name": "単体テスト結果_一覧",
+      "design_doc": "設計書[管理]ー71.CouponList一覧.xlsx",
+      "screen_label": "CouponList",
+      "fields": [
+        {
+          "name": "クーポンID",
+          "widget": "text",
+          "list_default": "なし"
+        },
+        {
+          "name": "クーポン名称",
+          "widget": "text",
+          "list_default": "なし"
+        },
+        {
+          "name": "_review_needed: could not determine field name (unlabeled date input #1)",
+          "widget": "date",
+          "list_default": "なし"
+        },
+        {
+          "name": "_review_needed: could not determine field name (unlabeled date input #2)",
+          "widget": "date",
+          "list_default": "なし"
+        },
+        {
+          "name": "種別",
+          "widget": "radio",
+          "list_default": "すべて",
+          "list_options": [
+            "すべて",
+            "QR",
+            "来店"
+          ]
+        },
+        {
+          "name": "承認",
+          "widget": "radio",
+          "list_default": "すべて",
+          "list_options": [
+            "すべて",
+            "未承認",
+            "承認"
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "label": "新規登録",
+          "target": "CouponForm登録",
+          "carries_id": false,
+          "action": null
+        },
+        {
+          "label": "編集",
+          "target": "CouponForm編集",
+          "carries_id": true,
+          "action": null
+        },
+        {
+          "label": "削除",
+          "target": null,
+          "carries_id": false,
+          "action": null
+        }
+      ],
+      "columns": [
+        {
+          "name": "クーポンID",
+          "sortable": true
+        },
+        {
+          "name": "クーポンコード",
+          "sortable": false
+        },
+        {
+          "name": "クーポン名称",
+          "sortable": false
+        },
+        {
+          "name": "期間",
+          "sortable": false
+        },
+        {
+          "name": "種別",
+          "sortable": false
+        },
+        {
+          "name": "承認",
+          "sortable": false
+        },
+        {
+          "name": "操作",
+          "sortable": false
+        }
+      ],
+      "sort_field": "クーポンID",
+      "sort_order": "降順"
+    },
+    {
+      "id": "coupons-new",
+      "type": "form",
+      "sheet_name": "単体テスト結果_登録",
+      "design_doc": "設計書[管理]ー71.CouponForm登録.xlsx",
+      "screen_label": "CouponForm",
+      "fields": [
+        {
+          "name": "クーポンID",
+          "widget": "text",
+          "form_default": "なし"
+        },
+        {
+          "name": "クーポンコード",
+          "widget": "text",
+          "form_default": "なし"
+        },
+        {
+          "name": "クーポン名称",
+          "widget": "text",
+          "form_default": "なし"
+        },
+        {
+          "name": "期間（開始日）",
+          "widget": "date",
+          "form_default": "なし"
+        },
+        {
+          "name": "期間（終了日）",
+          "widget": "date",
+          "form_default": "なし"
+        },
+        {
+          "name": "詳細",
+          "widget": "textarea",
+          "form_default": "なし"
+        },
+        {
+          "name": "種別",
+          "widget": "radio",
+          "form_default": "来店",
+          "form_options": [
+            "来店",
+            "QR"
+          ]
+        },
+        {
+          "name": "承認",
+          "widget": "radio",
+          "form_default": "承認",
+          "form_options": [
+            "承認",
+            "未承認"
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "label": "確認",
+          "target": null,
+          "carries_id": false,
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "coupons-new-confirm",
+      "type": "confirm",
+      "sheet_name": "単体テスト結果_登録確認",
+      "design_doc": "設計書[管理]ー71.CouponConfirm登録確認.xlsx",
+      "screen_label": "CouponConfirm",
+      "fields": [
+        {
+          "name": "クーポンID",
+          "widget": "text"
+        },
+        {
+          "name": "クーポン名称",
+          "widget": "text"
+        },
+        {
+          "name": "期間（開始日）",
+          "widget": "text"
+        },
+        {
+          "name": "期間（終了日）",
+          "widget": "text"
+        },
+        {
+          "name": "種別",
+          "widget": "text"
+        },
+        {
+          "name": "承認",
+          "widget": "text"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "修正する",
+          "target": null,
+          "carries_id": false,
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "coupons-id",
+      "type": "detail",
+      "sheet_name": "単体テスト結果_詳細",
+      "design_doc": "設計書[管理]ー71.CouponDetail詳細.xlsx",
+      "screen_label": "CouponDetail",
+      "fields": [
+        {
+          "name": "クーポンID",
+          "widget": "text"
+        },
+        {
+          "name": "クーポンコード",
+          "widget": "text"
+        },
+        {
+          "name": "クーポン名称",
+          "widget": "text"
+        },
+        {
+          "name": "期間（開始日）",
+          "widget": "text"
+        },
+        {
+          "name": "期間（終了日）",
+          "widget": "text"
+        },
+        {
+          "name": "詳細",
+          "widget": "text"
+        },
+        {
+          "name": "種別",
+          "widget": "text"
+        },
+        {
+          "name": "承認",
+          "widget": "text"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "一覧へ戻る",
+          "target": "CouponList一覧",
+          "carries_id": false,
+          "action": null
+        },
+        {
+          "label": "編集",
+          "target": "CouponForm編集",
+          "carries_id": true,
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "coupons-id-edit",
+      "type": "form",
+      "sheet_name": "単体テスト結果_編集",
+      "design_doc": "設計書[管理]ー71.CouponForm編集.xlsx",
+      "screen_label": "CouponForm",
+      "fields": [
+        {
+          "name": "クーポンID",
+          "widget": "text",
+          "form_default": "なし"
+        },
+        {
+          "name": "クーポンコード",
+          "widget": "text",
+          "form_default": "なし"
+        },
+        {
+          "name": "クーポン名称",
+          "widget": "text",
+          "form_default": "なし"
+        },
+        {
+          "name": "期間（開始日）",
+          "widget": "date",
+          "form_default": "なし"
+        },
+        {
+          "name": "期間（終了日）",
+          "widget": "date",
+          "form_default": "なし"
+        },
+        {
+          "name": "詳細",
+          "widget": "textarea",
+          "form_default": "なし"
+        },
+        {
+          "name": "種別",
+          "widget": "radio",
+          "form_default": "来店",
+          "form_options": [
+            "来店",
+            "QR"
+          ]
+        },
+        {
+          "name": "承認",
+          "widget": "radio",
+          "form_default": "承認",
+          "form_options": [
+            "承認",
+            "未承認"
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "label": "確認",
+          "target": null,
+          "carries_id": false,
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "coupons-id-edit-confirm",
+      "type": "confirm",
+      "sheet_name": "単体テスト結果_編集確認",
+      "design_doc": "設計書[管理]ー71.CouponConfirm編集確認.xlsx",
+      "screen_label": "CouponConfirm",
+      "fields": [
+        {
+          "name": "クーポンID",
+          "widget": "text"
+        },
+        {
+          "name": "クーポン名称",
+          "widget": "text"
+        },
+        {
+          "name": "期間（開始日）",
+          "widget": "text"
+        },
+        {
+          "name": "期間（終了日）",
+          "widget": "text"
+        },
+        {
+          "name": "種別",
+          "widget": "text"
+        },
+        {
+          "name": "承認",
+          "widget": "text"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "修正する",
+          "target": null,
+          "carries_id": false,
+          "action": null
+        }
+      ]
+    }
+  ]
+}
